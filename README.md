@@ -11,6 +11,8 @@
 
 ## Telegram
 
+Me</a></br>
+
 <a href="https://t.me/kadyroof_200"><img width="12px" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">
 <a href="https://instagram.com/kadyroof_200" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="gautamkrishnar" height="30" width="40" /></a>
 Me</a></br>
