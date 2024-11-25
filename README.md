@@ -43,10 +43,18 @@ Me</a></br>
 ![Git](https://img.shields.io/badge/-Git-black?style=for-the-badge&logo=git&logoColor=white)
 ![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 
+## Stats
 
+<div style="display: flex; justify-content: space-between;">
+  <div>
+    <img align="center" src="https://github-readme-stats.vercel.app/api?username=Ali050617&show_icons=true&theme=dracula&include_all_commits=true&count_private=true" alt="Ali050617"/>
+  </div>
+  <div>
+    <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ali050617&theme=blue-green" alt="Ali050617" />
+  </div>
+</div>
 
-
-[//]: # (<p align="left"> <img src="https://komarev.com/ghpvc/?username=abdullaabdukulov&label=Profile%20views&color=0e75b6&style=flat" alt="abdullaabdukulov" /> </p>)
+[//]: # (<p align="left"> <img src="https://komarev.com/ghpvc/?username=Ali050617&label=Profile%20views&color=0e75b6&style=flat" alt="Ali050617" /> </p>)
 
 
 [//]: # (![C]&#40;https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white&#41;)
