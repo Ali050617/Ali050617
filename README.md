@@ -138,10 +138,6 @@ me.say_hi()
   <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
 </div>
 
-<div align="center">
-  <img src="https://www.svgator.com/assets/svgator.svg" width="150" alt="animated contact me SVG" />
-</div>
-
 ## <img src="https://media.giphy.com/media/W5eoZHPpUx9sapR0eu/giphy.gif" width="30"> **GitHub Statistics** 
 
 <p align="center">
