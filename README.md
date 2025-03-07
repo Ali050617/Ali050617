@@ -1,6 +1,6 @@
-<div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=venom&height=300&color=gradient&text=%F0%9F%8C%9F%20Muhammad%20Ali%20%F0%9F%8C%9F&animation=twinkling&fontColor=fff&fontSize=70&desc=Master%20of%20Backend%20Sorcery&descAlignY=65&stroke=00FF00"/>
-</div>
+<h1 align="center">
+  <img src="name.svg" alt="Kadirov Muhammadali" width="800" height="200"/>
+</h1>
 
 <h1 align="center">
   <a href="https://git.io/typing-svg">
