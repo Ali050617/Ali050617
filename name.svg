@@ -1,120 +1,168 @@
-<svg fill="none" viewBox="0 0 800 100" width="800" height="100" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <style>
-        @keyframes gradientText {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
-        }
-        .snowflake {
-          font-size: 1.5em;
-          font-family: Arial;
-          text-shadow: 0 0 1px #000;
-        }
-        h1 {
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-          margin: 0;
-          font-size: 4em;
-          font-weight: 900;
-          letter-spacing: -.05em;
-          text-align: center;
-          background: -webkit-linear-gradient(right, #f2f3f4, #000, #f2f3f4, #000);
-          background: linear-gradient(270deg, #f2f3f4 0, #000, #f2f3f4, #000);
-          background-size: 400%;
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          -webkit-animation: gradientText 3s ease infinite;
-          animation: gradientText 3s ease infinite;
-        }
-        @keyframes snowflakes-fall {
-          0% {
-            top: -10%;
-          }
-          100% {
-            top: 100%;
-          }
-        }
-        @keyframes snowflakes-shake {
-          0% {
-            transform: translateX(0px);
-          }
-          50% {
-            transform: translateX(80px);
-          }
-          100% {
-            transform: translateX(0px);
-          }
-        }
-        .snowflake {
-          position: fixed;
-          top: -10%;
-          z-index: 9999;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-          cursor: default;
-          animation-name: snowflakes-fall, snowflakes-shake;
-          animation-duration: 10s, 3s;
-          animation-timing-function: linear, ease-in-out;
-          animation-iteration-count: infinite, infinite;
-          animation-play-state: running, running;
-        }
-        .snowflake:nth-of-type(1) {
-          left: 10%;
-          animation-delay: 1s, 1s;
-        }
-        .snowflake:nth-of-type(2) {
-          left: 20%;
-          animation-delay: 6s, .5s;
-        }
-        .snowflake:nth-of-type(3) {
-          left: 30%;
-          animation-delay: 4s, 2s;
-        }
-        .snowflake:nth-of-type(4) {
-          left: 40%;
-          animation-delay: 2s, 2s;
-        }
-        .snowflake:nth-of-type(5) {
-          left: 50%;
-          animation-delay: 8s, 3s;
-        }
-        .snowflake:nth-of-type(6) {
-          left: 60%;
-          animation-delay: 6s, 2s;
-        }
-        .snowflake:nth-of-type(7) {
-          left: 70%;
-          animation-delay: 2.5s, 1s;
-        }
-        .snowflake:nth-of-type(8) {
-          left: 80%;
-          animation-delay: 1s, 0s;
-        }
-        .snowflake:nth-of-type(9) {
-          left: 90%;
-          animation-delay: 3s, 1.5s;
-        }
-      </style>
-      <h1>Кадыров Мухаммадали</h1>
-      <div xmlns="http://www.w3.org/1999/xhtml" class="snowflake">💻</div>
-      <div xmlns="http://www.w3.org/1999/xhtml" class="snowflake">💰</div>
-      <div xmlns="http://www.w3.org/1999/xhtml" class="snowflake">🖥</div>
-      <div xmlns="http://www.w3.org/1999/xhtml" class="snowflake">💸</div>
-      <div xmlns="http://www.w3.org/1999/xhtml" class="snowflake">🖥</div>
-      <div xmlns="http://www.w3.org/1999/xhtml" class="snowflake">💰</div>
-      <div xmlns="http://www.w3.org/1999/xhtml" class="snowflake">💻</div>
-      <div xmlns="http://www.w3.org/1999/xhtml" class="snowflake">💸</div>
-      <div xmlns="http://www.w3.org/1999/xhtml" class="snowflake">💻</div>
-    </div>
-  </foreignObject>
+<svg width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Cosmic background gradient -->
+    <linearGradient id="cosmicGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0c29">
+        <animate attributeName="stop-color" values="#0f0c29;#302b63;#0f0c29" dur="20s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#302b63">
+        <animate attributeName="stop-color" values="#302b63;#24243e;#302b63" dur="20s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#24243e">
+        <animate attributeName="stop-color" values="#24243e;#0f0c29;#24243e" dur="20s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    
+    <!-- Star field -->
+    <radialGradient id="starGradient">
+      <stop offset="0%" stop-color="white" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+    
+    <!-- Nebula effect -->
+    <filter id="nebula">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="5" seed="1" result="noise" />
+      <feColorMatrix in="noise" type="saturate" values="0" result="noiseAlpha" />
+      <feComponentTransfer in="noiseAlpha">
+        <feFuncA type="table" tableValues="0 0 0.5 0.5 0" />
+      </feComponentTransfer>
+      <feComposite in="SourceGraphic" in2="noiseAlpha" operator="in" />
+    </filter>
+    
+    <!-- Glow effect -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <!-- 3D text extrusion -->
+    <filter id="extrude">
+      <feConvolveMatrix order="3,3" kernelMatrix="1 0 0 0 1 0 0 0 1" in="SourceAlpha" result="shadow" />
+      <feOffset dx="3" dy="3" in="shadow" result="offset" />
+      <feSpecularLighting surfaceScale="5" specularConstant="1" specularExponent="20" lighting-color="#ffffff" in="offset" result="specular">
+        <fePointLight x="-5000" y="-10000" z="20000" />
+      </feSpecularLighting>
+      <feComposite in="specular" in2="SourceAlpha" operator="in" result="specular" />
+      <feComposite in="SourceGraphic" in2="specular" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+    </filter>
+  </defs>
+  
+  <!-- Cosmic background -->
+  <rect width="800" height="200" fill="url(#cosmicGradient)" />
+  
+  <!-- Parallax star layers -->
+  <g id="starField1" opacity="0.7">
+    <script type="text/javascript">
+      <![CDATA[
+      for (let i = 0; i < 50; i++) {
+        const x = Math.random() * 800;
+        const y = Math.random() * 200;
+        const r = Math.random() * 1 + 0.5;
+        document.write(`
+          <circle cx="${x}" cy="${y}" r="${r}" fill="url(#starGradient)">
+            <animate attributeName="cx" values="${x};${x-10};${x}" dur="20s" repeatCount="indefinite" />
+          </circle>
+        `);
+      }
+      ]]>
+    </script>
+  </g>
+  
+  <g id="starField2" opacity="0.5">
+    <script type="text/javascript">
+      <![CDATA[
+      for (let i = 0; i < 30; i++) {
+        const x = Math.random() * 800;
+        const y = Math.random() * 200;
+        const r = Math.random() * 1.5 + 1;
+        document.write(`
+          <circle cx="${x}" cy="${y}" r="${r}" fill="url(#starGradient)">
+            <animate attributeName="cx" values="${x};${x-20};${x}" dur="30s" repeatCount="indefinite" />
+          </circle>
+        `);
+      }
+      ]]>
+    </script>
+  </g>
+  
+  <!-- Nebula effect -->
+  <rect width="800" height="200" fill="#6a11cb" opacity="0.2" filter="url(#nebula)">
+    <animate attributeName="opacity" values="0.2;0.3;0.2" dur="10s" repeatCount="indefinite" />
+  </rect>
+  
+  <!-- 3D rotating planet -->
+  <g transform="translate(700, 100)">
+    <circle r="40" fill="url(#cosmicGradient)" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="20s" repeatCount="indefinite" />
+    </circle>
+    <ellipse rx="40" ry="10" fill="url(#cosmicGradient)" opacity="0.5">
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="20s" repeatCount="indefinite" />
+    </ellipse>
+  </g>
+  
+  <!-- Floating asteroids -->
+  <g id="asteroids">
+    <script type="text/javascript">
+      <![CDATA[
+      for (let i = 0; i < 5; i++) {
+        const x = Math.random() * 800;
+        const y = Math.random() * 200;
+        const r = Math.random() * 5 + 2;
+        const duration = Math.random() * 10 + 10;
+        document.write(`
+          <circle cx="${x}" cy="${y}" r="${r}" fill="#a0a0a0" opacity="0.7">
+            <animate attributeName="cx" values="${x};${x + 50};${x}" dur="${duration}s" repeatCount="indefinite" />
+            <animate attributeName="cy" values="${y};${y - 20};${y}" dur="${duration}s" repeatCount="indefinite" />
+          </circle>
+        `);
+      }
+      ]]>
+    </script>
+  </g>
+  
+  <!-- Cosmic dust particles -->
+  <g id="cosmicDust">
+    <script type="text/javascript">
+      <![CDATA[
+      for (let i = 0; i < 50; i++) {
+        const x = Math.random() * 800;
+        const y = Math.random() * 200;
+        const r = Math.random() * 1 + 0.5;
+        const duration = Math.random() * 5 + 5;
+        document.write(`
+          <circle cx="${x}" cy="${y}" r="${r}" fill="#ffffff" opacity="0.5">
+            <animate attributeName="cx" values="${x};${x + 20};${x}" dur="${duration}s" repeatCount="indefinite" />
+            <animate attributeName="cy" values="${y};${y - 10};${y}" dur="${duration}s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.5;0;0.5" dur="${duration}s" repeatCount="indefinite" />
+          </circle>
+        `);
+      }
+      ]]>
+    </script>
+  </g>
+  
+  <!-- 3D animated text -->
+  <g filter="url(#extrude)" transform="translate(400, 100)">
+    <text id="mainText" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#ffffff" filter="url(#glow)">
+      Kadirov Muhammadali
+      <animateTransform attributeName="transform" type="rotate" values="0 0 0; 5 0 0; 0 0 0; -5 0 0; 0 0 0" dur="10s" repeatCount="indefinite" />
+    </text>
+  </g>
+  
+  <!-- Animated cosmic underline -->
+  <path d="M250 140 Q400 180 550 140" stroke="url(#cosmicGradient)" stroke-width="3" fill="none" stroke-linecap="round" opacity="0" filter="url(#glow)">
+    <animate attributeName="opacity" values="0;1" dur="2s" begin="1s" fill="freeze" />
+    <animate attributeName="d" values="M400 140 Q400 140 400 140;M250 140 Q400 180 550 140" dur="3s" begin="1s" fill="freeze" />
+  </path>
+  
+  <!-- Shooting star -->
+  <g>
+    <line x1="-10" y1="50" x2="0" y2="60" stroke="#ffffff" stroke-width="2" stroke-linecap="round">
+      <animateMotion path="M0 0 L820 100" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite" />
+    </line>
+  </g>
 </svg>
