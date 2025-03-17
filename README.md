@@ -213,9 +213,7 @@ me.say_hi()
   <img src="https://forthebadge.com/images/badges/open-source.svg" />
 </div>
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Ali050617/Ali050617/output/github-contribution-grid-snake-dark.svg" width="100%">
-</div>
+
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWFpdHR0dmgzazhxZnhvdDgwamMyczVjaXFodzd3Y2kzanpia2FiOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oKIPic2BnoVZkRwYw/giphy.gif" width="1000" height="10"/>
 
